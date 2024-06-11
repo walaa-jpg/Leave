@@ -1,0 +1,45 @@
+﻿@model Leave.Models.LeaveRequest
+
+<h2>Create Leave Request</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="EmployeeID" class="control-label"></label>
+        <input asp-for="EmployeeID" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LeaveType" class="control-label"></label>
+        <select asp-for="LeaveType" class="form-control">
+            <option value="Annual">Annual</option>
+            <option value="Sick">Sick</option>
+            <option value="Unpaid">Unpaid</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="StartDate" class="control-label"></label>
+        <input asp-for="StartDate" class="form-control" type="date" />
+    </div>
+    <div class="form-group">
+        <label asp-for="EndDate" class="control-label"></label>
+        <input asp-for="EndDate" class="form-control" type="date" />
+    </div>
+    <div class="form-group">
+        <label>Status:</label>
+        <div>
+            <label><input type="radio" asp-for="Status" value="Pending" /> Pending</label>
+            <label><input type="radio" asp-for="Status" value="Approved" /> Approved</label>
+            <label><input type="radio" asp-for="Status" value="Rejected" /> Rejected</label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="IsApproved" class="control-label"></label>
+        <select asp-for="IsApproved" class="form-control">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>

@@ -1,0 +1,7 @@
+@Leave_HostAddress = http://localhost:5281
+
+GET {{Leave_HostAddress}}/leave/
+Accept: application/json
+
+
+###
